@@ -20,11 +20,11 @@ class QuestionIndicatorWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Questão $currentPage',
+                'Question Number $currentPage',
                 style: AppTextStyles.body,
               ),
               Text(
-                'de $length',
+                'of $length',
                 style: AppTextStyles.body,
               ),
             ],

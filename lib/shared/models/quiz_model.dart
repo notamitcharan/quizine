@@ -2,39 +2,39 @@ import 'dart:convert';
 
 import 'package:quizine/shared/models/question_model.dart';
 
-enum Level { facil, medio, dificil, perito }
+// enum Level { easy, medium, difficult, expert }
 
-extension LevelStringExt on String {
-  Level get parse => {
-        "facil": Level.facil,
-        "medio": Level.medio,
-        "dificil": Level.dificil,
-        "perito": Level.perito
-      }[this]!;
-}
+// extension LevelStringExt on String {
+//   Level get parse => {
+//         "easy": Level.easy,
+//         "medium": Level.medium,
+//         "difficult": Level.difficult,
+//         "expert": Level.expert
+//       }[this]!;
+// }
 
-extension LevelExt on Level {
-  String get parse => {
-        Level.facil: "facil",
-        Level.medio: "medio",
-        Level.dificil: "dificil",
-        Level.perito: "perito",
-      }[this]!;
-}
+// extension LevelExt on Level {
+//   String get parse => {
+//         Level.easy: "easy",
+//         Level.medium: "medium",
+//         Level.difficult: "difficult",
+//         Level.expert: "expert",
+//       }[this]!;
+// }
 
 class QuizModel {
   final String title;
   final List<QuestionModel> questions;
   final int questionAnswered;
-  final String imagem;
-  final Level level;
+  final String image;
+  // final Level level;
 
   QuizModel({
     required this.title,
     required this.questions,
     this.questionAnswered = 0,
-    required this.imagem,
-    required this.level,
+    required this.image,
+    // required this.level,
   });
 
   Map<String, dynamic> toMap() {
@@ -42,8 +42,8 @@ class QuizModel {
       'title': title,
       'questions': questions.map((x) => x.toMap()).toList(),
       'questionAnswered': questionAnswered,
-      'imagem': imagem,
-      'level': level.parse,
+      'image': image,
+      // 'level': level.parse,
     };
   }
 
@@ -53,8 +53,8 @@ class QuizModel {
       questions: List<QuestionModel>.from(
           map['questions']?.map((x) => QuestionModel.fromMap(x))),
       questionAnswered: map['questionAnswered'],
-      imagem: map['imagem'],
-      level: map['level'].toString().parse,
+      image: map['image'],
+      // level: map['level'].toString().parse,
     );
   }
 

@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
       systemNavigationBarColor: Colors.transparent,
     ));
     return MaterialApp(
-      title: "quizine",
+      title: "Quizine",
       home: SplashPage(),
     );
   }
