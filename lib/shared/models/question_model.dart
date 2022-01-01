@@ -5,10 +5,11 @@ import 'package:quizine/shared/models/answer_model.dart';
 class QuestionModel {
   final String title;
   final List<AnswerModel> answers;
+  final int ansCount;
 
-  QuestionModel({required this.title, required this.answers})
+  QuestionModel({required this.title, required this.answers, required this.ansCount})
       : assert(
-          answers.length == 4,
+          answers.length == ansCount,
         );
 
   Map<String, dynamic> toMap() {
@@ -21,8 +22,9 @@ class QuestionModel {
   factory QuestionModel.fromMap(Map<String, dynamic> map) {
     return QuestionModel(
       title: map['title'],
+      ansCount: map['ansCount'],
       answers: List<AnswerModel>.from(
-          map['answers']?.map((x) => AnswerModel.fromMap(x))),
+          map['answers']?.map((x) => AnswerModel.fromMap(x)))
     );
   }
 

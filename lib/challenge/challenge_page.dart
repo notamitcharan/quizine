@@ -90,13 +90,13 @@ class _ChallengePageState extends State<ChallengePage> {
                 if (controller.currentPage < widget.questions.length)
                   Expanded(
                       child: NextButtonWidget.white(
-                    label: 'Pular',
+                    label: 'Next',
                     onTap: () => nextPage(300),
                   )),
                 if (value == widget.questions.length)
                   Expanded(
                     child: NextButtonWidget.green(
-                      label: 'Confirmar',
+                      label: 'Confirm',
                       onTap: () {
                         Navigator.pushReplacement(
                           context,

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'package:quizine/challenge/widget/next_button/next_button_widget.dart';
@@ -26,11 +28,11 @@ class ResultPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Image.asset(AppImages.trophy),
+            // Image.asset(AppImages.trophy),
             Column(
               children: [
                 Text(
-                  'Parabéns',
+                  'Congrats',
                   style: AppTextStyles.heading40,
                 ),
                 SizedBox(
@@ -40,15 +42,16 @@ class ResultPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 64),
                   child: Text.rich(
                     TextSpan(
-                      text: 'Você concluiu ',
-                      style: AppTextStyles.body,
+                      text: 'You have concluded the quiz ',
+                      style: AppTextStyles.heading,
                       children: [
                         TextSpan(
                           text: title,
-                          style: AppTextStyles.bodyBold,
+                          style: AppTextStyles.heading,
                         ),
                         TextSpan(
-                          text: ' com $result  de $length acertos,',
+                          text: '\n\n\n\n\n You answered $result of $length correctly. \n The topics we found to be weak are <TAG>',
+                          style: AppTextStyles.heading,
                         )
                       ],
                     ),
@@ -65,10 +68,10 @@ class ResultPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 68),
                         child: NextButtonWidget.purple(
-                            label: 'Compartilhar',
+                            label: 'Share Report',
                             onTap: () {
                               Share.share(
-                                  'Veja meu resultado no quiz $title: $result de $length');
+                                  ' $title: Scored $result out of $length');
                             }),
                       ),
                     ),
@@ -83,7 +86,7 @@ class ResultPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 68),
                         child: NextButtonWidget.transparent(
-                            label: 'Voltar ao início',
+                            label: 'Back to Home',
                             onTap: () {
                               Navigator.pop(context);
                             }),
