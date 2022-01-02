@@ -42,23 +42,23 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 24,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    LevelButtonWidget(
-                      label: "Fácil",
-                    ),
-                    LevelButtonWidget(
-                      label: "Médio",
-                    ),
-                    LevelButtonWidget(
-                      label: "Difícil",
-                    ),
-                    LevelButtonWidget(
-                      label: "Perito",
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     LevelButtonWidget(
+                //       label: "Easy",
+                //     ),
+                //     LevelButtonWidget(
+                //       label: "Medium",
+                //     ),
+                //     LevelButtonWidget(
+                //       label: "Difficult",
+                //     ),
+                //     LevelButtonWidget(
+                //       label: "Expert",
+                //     ),
+                //   ],
+                // ),
                 SizedBox(
                   height: 24,
                 ),

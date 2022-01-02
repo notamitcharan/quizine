@@ -5,29 +5,29 @@ import 'package:google_fonts/google_fonts.dart';
 class LevelButtonWidget extends StatelessWidget {
   final String label;
   LevelButtonWidget({Key? key, required this.label})
-      : assert(["Fácil", "Médio", "Difícil", "Perito"].contains(label)),
+      : assert(["Easy", "Medium", "Difficult", "Expert"].contains(label)),
         super(key: key);
 
   final config = {
-    "Fácil": {
-      "color": AppColors.levelButtonFacil,
-      "borderColor": AppColors.levelButtonBorderFacil,
-      "fontColor": AppColors.levelButtonTextFacil,
+    "Easy": {
+      "color": AppColors.levelButtonEasy,
+      "borderColor": AppColors.levelButtonBorderEasy,
+      "fontColor": AppColors.levelButtonTextEasy,
     },
-    "Médio": {
-      "color": AppColors.levelButtonMedio,
-      "borderColor": AppColors.levelButtonBorderMedio,
-      "fontColor": AppColors.levelButtonTextMedio,
+    "Medium": {
+      "color": AppColors.levelButtonMedium,
+      "borderColor": AppColors.levelButtonBorderMedium,
+      "fontColor": AppColors.levelButtonTextMedium,
     },
-    "Difícil": {
-      "color": AppColors.levelButtonDificil,
-      "borderColor": AppColors.levelButtonBorderDificil,
-      "fontColor": AppColors.levelButtonTextDificil,
+    "Difficult": {
+      "color": AppColors.levelButtonDifficult,
+      "borderColor": AppColors.levelButtonBorderDifficult,
+      "fontColor": AppColors.levelButtonTextDifficult,
     },
-    "Perito": {
-      "color": AppColors.levelButtonPerito,
-      "borderColor": AppColors.levelButtonBorderPerito,
-      "fontColor": AppColors.levelButtonTextPerito,
+    "Expert": {
+      "color": AppColors.levelButtonExpert,
+      "borderColor": AppColors.levelButtonBorderExpert,
+      "fontColor": AppColors.levelButtonTextExpert,
     },
   };
 

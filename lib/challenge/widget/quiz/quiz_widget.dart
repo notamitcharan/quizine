@@ -25,31 +25,33 @@ class _QuizWidgetState extends State<QuizWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: Container(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 64,
-            ),
-            Text(
-              widget.question.title,
-              style: AppTextStyles.heading,
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            for (var i = 0; i < widget.question.answers.length; i++)
-              AnswerWidget(
-                answer: answer(i),
-                disabled: indexSelected != -1,
-                isSelected: indexSelected == i,
-                onTap: (value) {
-                  widget.onSelected(value);
-                  indexSelected = i;
-                  setState(() {});
-                },
+      child: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 64,
               ),
-          ],
+              Text(
+                widget.question.title,
+                style: AppTextStyles.heading,
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              for (var i = 0; i < widget.question.answers.length; i++)
+                AnswerWidget(
+                  answer: answer(i),
+                  disabled: indexSelected != -1,
+                  isSelected: indexSelected == i,
+                  onTap: (value) {
+                    widget.onSelected(value);
+                    indexSelected = i;
+                    setState(() {});
+                  },
+                ),
+            ],
+          ),
         ),
       ),
     );
