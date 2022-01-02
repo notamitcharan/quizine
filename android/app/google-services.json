@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1008301785077",
+    "project_id": "quizine-3a329",
+    "storage_bucket": "quizine-3a329.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008301785077:android:40e1c2560818971416eabc",
+        "android_client_info": {
+          "package_name": "com.example.quizine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008301785077-ibgbuds8205ejbc8k8dktn19tomu5uqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quizine",
+            "certificate_hash": "1475be58eb55e989fe96aa3a4b099bf8b22972ca"
+          }
+        },
+        {
+          "client_id": "1008301785077-be1dgj3ve73akfsmpdeg05ei29sapfrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv4QpCfiu9PRLNfGms5i_Xcv5vGmlxBsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008301785077-be1dgj3ve73akfsmpdeg05ei29sapfrh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
