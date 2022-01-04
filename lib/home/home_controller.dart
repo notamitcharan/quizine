@@ -21,9 +21,9 @@ class HomeController {
     state = HomeState.success;
   }
 
-  void getQuizzes() async {
+  void getQuizzes(weeks) async {
     state = HomeState.loading;
-    quizzes = await repository.getQuizzes();
+    quizzes = await repository.getQuizzes(weeks);
     state = HomeState.success;
   }
 }

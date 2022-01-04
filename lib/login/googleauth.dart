@@ -6,6 +6,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:quizine/home/home_page.dart';
+import 'package:quizine/login/login.dart';
+import 'package:quizine/selection/subject/subselection.dart';
 
 GoogleSignIn googleSignIn = GoogleSignIn();
 final FirebaseAuth auth = FirebaseAuth.instance;
@@ -42,14 +44,14 @@ void signInWithGoogle(BuildContext context) async {
 
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => SubSelect(),
             ),
           );
         } else {
           users.doc(user?.uid).set(userData);
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => LoginPage(),
             ),
           );
         }
@@ -59,4 +61,10 @@ void signInWithGoogle(BuildContext context) async {
     print(PlatformException);
     print("Sign in not successful !");
   }
+}
+
+void signOutnWithGoogle(BuildContext context) async {
+  final GoogleSignInAccount? googleSignInAccount =
+      await googleSignIn.disconnect();
+  FirebaseAuth.instance.signOut();
 }

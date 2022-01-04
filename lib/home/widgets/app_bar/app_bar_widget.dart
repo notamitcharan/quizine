@@ -2,11 +2,20 @@ import 'package:quizine/core/core.dart';
 import 'package:quizine/home/widgets/score_card/score_card_widget.dart';
 import 'package:quizine/shared/models/user_model.dart';
 import 'package:flutter/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+final FirebaseAuth auth = FirebaseAuth.instance;
+final User? userg = auth.currentUser;
 
 class AppBarWidget extends PreferredSize {
+  var userg;
+
+  // here you write the codes to input the data into firestore
+  User? get userr => userg;
   final UserModel user;
-  AppBarWidget({required this.user})
+  AppBarWidget({Key? key, required this.user, required this.userg})
       : super(
+          key: key,
           preferredSize: Size.fromHeight(250),
           child: Container(
             height: 280,

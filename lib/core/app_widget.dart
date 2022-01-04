@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:quizine/challenge/challenge_page.dart';
 import 'package:quizine/home/home_page.dart';
+import 'package:quizine/selection/subject/subselection.dart';
+import 'package:quizine/selection/week/weekselection.dart';
 import 'package:quizine/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,6 +17,6 @@ class AppWidget extends StatelessWidget {
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.transparent,
     ));
-    return MaterialApp(title: "quizine", home: LoginPage());
+    return MaterialApp(title: "quizine", home: WeekSelect());
   }
 }
